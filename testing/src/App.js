@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Person from "./Person/Person";
+import "./Person/Person.css";
 
 class App extends Component {
   state = {
@@ -32,10 +33,21 @@ class App extends Component {
   };
 
   render() {
+    const style = {
+      backgroundColor: "white",
+      font: "inherit",
+      border: "1px solid blue",
+      padding: "8px",
+      cursor: "pointer"
+    };
+
     return (
       <div className="App">
         <h1> Hi!!! </h1>
-        <button onClick={this.switchNameHangler.bind(this, "Maxi!")}>
+        <button
+          style={style}
+          onClick={this.switchNameHangler.bind(this, "Maxi!")}
+        >
           Change name
         </button>
         <Person
